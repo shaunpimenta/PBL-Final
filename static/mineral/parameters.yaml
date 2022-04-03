@@ -1,0 +1,21 @@
+batch_size: 100000
+bits: 32
+mask: null
+meteorite_dir: !!python/object/apply:pathlib.WindowsPath
+- minerals
+- data
+model: null
+n: 100
+noise: 10
+output_dir: !!python/object/apply:pathlib.WindowsPath
+- static
+- mineral
+output_prefix: ''
+standards_dir: !!python/object/apply:pathlib.WindowsPath
+- minerals
+- standards_32bit
+target_minerals_file: !!python/object/apply:pathlib.WindowsPath
+- minerals
+- targets_with_color.yaml
+title: Mineral Detection
+unknown_n: 100
