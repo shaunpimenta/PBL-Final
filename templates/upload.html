@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Image Segmentation</title>
+<h2>Segmentation Analysis</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filename %}
+	<div>
+		<img src="../static/predict/{{filename}}pred.png">
+		<img src="../static/uploads/{{filename}}" height="400px" width="400px">
+	</div>
+{% endif %}
+<h4>Proceed For Mineral Detection : </h4>
+<form method="post" action="{{url_for('predictm')}}">
+		<input type="submit" value="Submit">
+</form>
